@@ -1,1 +1,4 @@
+# TODO IMPLEMENT DATABASE URL
+SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:Leen448@localhost:5432/CastingAgency'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
 
