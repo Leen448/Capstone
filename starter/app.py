@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from models import app, db,  Actors, Movies
 
-
+SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:Leen448@localhost:5432/CastingAgency'
 def create_app(test_config=None):
     # create and configure the app
     
@@ -17,8 +17,8 @@ def create_app(test_config=None):
 
     @app.route('/actors')
     def get_actors():
-        actors_list = Actors.query.all()
-        return jsonify({'success': True, 'Actors': actors_list}), 200
+        # actors_list = Actors.query.all()
+        return jsonify({'success': True, 'Actors': "actors_list"}), 200
 
     # @app.route('/actors', method=['PATCH'])
     # def edit_actors():
