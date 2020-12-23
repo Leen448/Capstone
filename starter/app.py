@@ -9,7 +9,6 @@ from auth import AuthError, requires_auth
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__)
-    # database_path=(os.environ.get("SQLALCHEMY_DATABASE_URI"))
     setup_db(app) 
 
     CORS(app, resources={r"/api/*": {"origins": "*"}})
