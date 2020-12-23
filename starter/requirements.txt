@@ -12,6 +12,7 @@ colorama==0.4.3
 cryptography==3.2.1
 distlib==0.3.1
 docutils==0.15.2
+ecdsa==0.14.1
 filelock==3.0.12
 flake8==3.8.4
 Flask==1.1.2
@@ -46,6 +47,7 @@ pyparsing==2.4.7
 pytest==6.1.2
 python-dateutil==2.8.1
 python-editor==1.0.4
+python-jose==3.2.0
 PyYAML==5.3.1
 rsa==4.5
 s3transfer==0.3.3

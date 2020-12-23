@@ -5,14 +5,22 @@ from flask_cors import CORS
 from models import setup_db, db, Actors, Movies
 from auth import AuthError, requires_auth
 
-database_path = os.environ.get('SQLALCHEMY_DATABASE_URI') 
 
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__)
-    setup_db(app,database_path)
-    db.init_app(app)
-    CORS(app)
+    # database_path=(os.environ.get("SQLALCHEMY_DATABASE_URI"))
+    setup_db(app) 
+
+    CORS(app, resources={r"/api/*": {"origins": "*"}})
+
+    @app.after_request
+    def after_request(response):
+        response.headers.add('Access-Control-Allow-Headers',
+                             'Content-Type,Authorization,true')
+        response.headers.add('Access-Control-Allow-Methods',
+                             'GET,PATCH,POST,DELETE,OPTIONS')
+        return response
 
     #_____________Actor________________#
 
