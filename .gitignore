@@ -1,6 +1,4 @@
 
-starter/__pycache__/
-starter/__pycache__/app.cpython-38.pyc
-starter/__pycache__/models.cpython-38.pyc
-starter/__pycache__/app.cpython-38.pyc
-*.pyc
+__pycache__/
+.vscode
+
